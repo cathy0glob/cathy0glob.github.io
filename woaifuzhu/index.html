@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我爱辅助网 - 游戏辅助工具精选与安全使用指南</title>
+    <meta name="description" content="我爱辅助网提供最新、最安全的游戏辅助工具下载与使用教程，涵盖热门网游外设、脚本推荐及防封号技巧，致力于打造玩家信赖的辅助资源平台。">
+    <meta name="keywords" content="我爱辅助网,游戏辅助,外挂下载,脚本工具,防封号,游戏外设">
+    <style>
+        :root {
+            --primary-color: #00bcd4;
+            --primary-dark: #0097a7;
+            --accent-color: #ff9800;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-dark);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-dark);
+            color: var(--primary-dark);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 188, 212, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00bcd4 0%, #006064 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 8px;
+            border-radius: 50px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            flex: 1;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        /* Tool Grid */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 160px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-count {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-list li {
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 12px;
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .sidebar-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .sidebar-list a:hover {
+            color: var(--primary-dark);
+        }
+
+        .sidebar-list .meta {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-item h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .guide-item ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .guide-item li {
+            margin-bottom: 8px;
+        }
+
+        /* Safety Notice */
+        .safety-banner {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #0d47a1;
+        }
+
+        /* Footer */
+        footer {
+            background: #263238;
+            color: #cfd8dc;
+            padding: 60px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #37474f;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-container {
+                height: auto;
+                padding: 12px;
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+                order: 3;
+                margin-top: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <span>我爱辅助网</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">防封教程</a></li>
+                    <li><a href="#">使用帮助</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索游戏辅助的无限可能</h1>
+            <p>提供安全、稳定、高效的游戏辅助工具与脚本解决方案，助您轻松驾驭游戏，享受更多乐趣。</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索您需要的辅助工具（如：LOL脚本、逆水寒辅助等）...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <section class="guide-section">
+                <div class="section-title">
+                    <span>安全使用指南</span>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <h3>为什么选择安全辅助？</h3>
+                        <p>在游戏辅助领域，安全性是核心。使用不安全的脚本可能导致账号封禁或设备感染病毒。我爱辅助网严格筛选工具，确保所有软件经过安全扫描。</p>
+                        <ul>
+                            <li>拒绝恶意代码与后门</li>
+                            <li>支持多平台兼容</li>
+                            <li>定期更新修复漏洞</li>
+                        </ul>
+                    </div>
+                    <div class="guide-item">
+                        <h3>防封号核心技巧</h3>
+                        <p>合理的参数设置是防止封号的关键。我们提供详细的配置教程，教您如何模拟真人操作行为，降低系统检测风险。</p>
+                        <ul>
+                            <li>智能行为模拟算法</li>
+                            <li>动态延迟与随机化</li>
+                            <li>硬件指纹保护</li>
+                        </ul>
+                        <div class="safety-banner">
+                            <strong>温馨提示：</strong> 请仅用于单机或PVE模式，严禁用于PVP竞技场，以免产生法律纠纷。
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <span>热门辅助工具</span>
+                    <a href="#">查看全部 &rarr;</a>
+                </div>
+                <div class="tool-grid">
+                    <!-- Tool Card 1 -->
+                    <article class="tool-card">
+                        <div class="card-image">
+                            <span class="card-badge">热门</span>
+                            <img src="https://picsum.photos/seed/game1/400/250" alt="游戏辅助工具预览">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">全能型游戏脚本助手 V4.2</h3>
+                            <p class="card-desc">支持多款主流网游，内置智能识别引擎，自动寻路、自动刷怪，操作简单流畅。</p>
+                            <div class="card-tags">
+                                <span class="tag">多开支持</span>
+                                <span class="tag">自动挂机</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="download-count">已下载 12,580 次</span>
+                                <a href="#" class="btn btn-primary" style="padding: 6px 16px; font-size: 13px;">立即下载</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tool Card 2 -->
+                    <article class="tool-card">
+                        <div class="card-image">
+                            <span class="card-badge">新</span>
+                            <img src="https://picsum.photos/seed/game2/400/250" alt="游戏辅助工具预览">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">射击游戏精准瞄准辅助 Pro</h3>
+                            <p class="card-desc">专为FPS游戏设计，零延迟弹道修正，帮助新手快速提升反应速度与命中率。</p>
+                            <div class="card-tags">
+                                <span class="tag">低延迟</span>
+                                <span class="tag">自定义</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="download-count">已下载 8,920 次</span>
+                                <a href="#" class="btn btn-primary" style="padding: 6px 16px; font-size: 13px;">立即下载</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tool Card 3 -->
+                    <article class="tool-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/game3/400/250" alt="游戏辅助工具预览">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">卡牌策略游戏智能推图器</h3>
+                            <p class="card-desc">自动匹配最优卡组，一键推通关卡，省去繁琐的战斗过程，专注收集养成。</p>
+                            <div class="card-tags">
+                                <span class="tag">策略优化</span>
+                                <span class="tag">免战力</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="download-count">已下载 5,430 次</span>
+                                <a href="#" class="btn btn-primary" style="padding: 6px 16px; font-size: 13px;">立即下载</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tool Card 4 -->
+                    <article class="tool-card">
+                        <div class="card-image">
+                            <span class="card-badge">VIP</span>
+                            <img src="https://picsum.photos/seed/game4/400/250" alt="游戏辅助工具预览">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">MMORPG多角色自动化管理</h3>
+                            <p class="card-desc">支持多开管理器，一键同步所有角色操作，轻松完成日常任务与副本挑战。</p>
+                            <div class="card-tags">
+                                <span class="tag">批量操作</span>
+                                <span class="tag">稳定</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="download-count">已下载 9,100 次</span>
+                                <a href="#" class="btn btn-primary" style="padding: 6px 16px; font-size: 13px;">立即下载</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <span>最新更新日志</span>
+                </div>
+                <div style="background: white; border-radius: 8px; box-shadow: var(--shadow); padding: 20px;">
+                    <ul class="sidebar-list">
+                        <li>
+                            <a href="#">
+                                <span>[版本 V4.2.1] 修复了部分游戏在Win11下的闪退问题</span>
+                                <span class="meta">2023-10-24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>[版本 V4.2.0] 新增“脚本市场”，支持玩家自定义分享</span>
+                                <span class="meta">2023-10-18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>[版本 V4.1.8] 优化了物理引擎模拟，操作更真实</span>
+                                <span class="meta">2023-10-10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>[版本 V4.1.5] 移除了部分广告插件，提升运行速度</span>
+                                <span class="meta">2023-09-28</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 style="font-size: 16px; margin-bottom: 16px;">热门分类</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">RPG角色扮演</a> <span class="meta">320个</span></li>
+                    <li><a href="#">FPS射击游戏</a> <span class="meta">150个</span></li>
+                    <li><a href="#">MOBA竞技对战</a> <span class="meta">98个</span></li>
+                    <li><a href="#">策略卡牌</a> <span class="meta">210个</span></li>
+                    <li><a href="#">休闲益智</a> <span class="meta">85个</span></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 style="font-size: 16px; margin-bottom: 16px;">站长推荐</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#">如何查看软件版本信息</a></li>
+                    <li><a href="#">外设驱动安装教程</a></li>
+                    <li><a href="#">模拟器常见报错解决</a></li>
+                    <li><a href="#">Windows系统安全设置</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 style="font-size: 16px; margin-bottom: 16px;">联系我们</h3>
+                <p style="font-size: 13px; color: #666; margin-bottom: 12px;">如有软件下载问题或建议，欢迎留言。</p>
+                <textarea style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; resize: none;" placeholder="请输入您的留言..."></textarea>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 8px;">发送留言</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我爱辅助网</h4>
+                <p style="font-size: 13px; line-height: 1.8;">我爱辅助网是一个专注于游戏辅助工具分享的垂直平台。我们致力于为玩家提供最新、最安全、最实用的辅助资源，同时普及游戏辅助的安全使用知识。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">软件下载</a></li>
+                    <li><a href="#">防封教程</a></li>
+                    <li><a href="#">使用帮助</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">游戏攻略站</a></li>
+                    <li><a href="#">硬件评测中心</a></li>
+                    <li><a href="#">玩家社区</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="font-size: 13px; color: #90a4ae;">获取最新工具更新与独家福利。</p>
+                <div style="margin-top: 10px; display: flex; gap: 10px;">
+                    <div style="width: 32px; height: 32px; background: #455a64; border-radius: 4px;"></div>
+                    <div style="width: 32px; height: 32px; background: #455a64; border-radius: 4px;"></div>
+                    <div style="width: 32px; height: 32px; background: #455a64; border-radius: 4px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 我爱辅助网 版权所有. 本站内容仅供学习交流使用，请勿用于非法用途。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
