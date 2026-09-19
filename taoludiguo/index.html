@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="套路敌国皇帝后我怀崽了 - 沉浸式古言言情小说阅读平台，收录高人气宫廷权谋、甜宠追妻、带球跑等热门题材，提供在线阅读、章节导航及读者社区互动。">
+    <meta name="keywords" content="套路敌国皇帝后我怀崽了,古言小说,言情小说,宫廷小说,甜宠小说,在线阅读">
+    <title>套路敌国皇帝后我怀崽了 - 深度阅读与推荐指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-light: #d7bde2;
+            --accent-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --text-gray: #7f8c8d;
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid var(--text-gray);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .search-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Featured Card */
+        .featured-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .featured-content {
+            padding: 30px;
+        }
+
+        .featured-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .featured-content p {
+            color: #555;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #732d91;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-light);
+        }
+
+        /* Chapter List */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .chapter-item {
+            padding: 15px 25px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-item:hover {
+            background-color: #fafafa;
+        }
+
+        .chapter-link {
+            color: var(--text-dark);
+            flex-grow: 1;
+        }
+
+        .chapter-date {
+            color: var(--text-gray);
+            font-size: 13px;
+            margin-left: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .similar-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .similar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .similar-title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .similar-title:hover {
+            color: var(--primary-color);
+        }
+
+        .similar-desc {
+            font-size: 13px;
+            color: var(--text-gray);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            color: #95a5a6;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .chapter-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .chapter-date {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">古韵书阁</a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">分类</a>
+                <a href="#">排行榜</a>
+                <a href="#">书单</a>
+                <a href="#">社区</a>
+            </nav>
+            <button class="search-btn">搜索小说</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>套路敌国皇帝后我怀崽了</h1>
+                <p>讲述女主为了生存与复仇，步步为营接近敌国帝王，却在朝夕相处间动了真心，最终怀有身孕的跌宕起伏故事。</p>
+                <div class="tags">
+                    <span class="tag">古言</span>
+                    <span class="tag">权谋</span>
+                    <span class="tag">甜宠</span>
+                    <span class="tag">追妻火葬场</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- Left Content -->
+            <div class="content-area">
+                <!-- Featured Section -->
+                <article class="featured-card">
+                    <img src="https://picsum.photos/seed/emperor/800/400" alt="套路敌国皇帝后我怀崽了 封面" class="featured-image">
+                    <div class="featured-content">
+                        <h2>套路敌国皇帝后我怀崽了</h2>
+                        <div class="meta-info">
+                            <span>作者：墨染流年</span>
+                            <span>状态：连载中</span>
+                            <span>字数：120万字</span>
+                        </div>
+                        <p>
+                            这是一个关于“猎手与猎物”身份互换的故事。大梁亡国，她是亡国公主，为了保全家族，她利用美色与智谋，精心设计了一场“以身许国”的戏码，意图接近敌国最尊贵的帝王——萧景珩。她以为自己是棋局中最完美的执棋者，却不知在萧景珩眼中，她早已是唯一的棋子。
+                            在朝堂的惊涛骇浪与深宫的尔虞我诈中，她步步为营，却也在不知不觉中沦陷。当她真正怀上他的孩子时，才发现这局棋，早已输得一败涂地。究竟是帝王甘愿入局，还是另有隐情？当真相揭开，她该如何面对这份错位的深情？
+                        </p>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary">开始阅读</button>
+                            <button class="btn btn-outline">加入书架</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Chapter List -->
+                <section>
+                    <div class="section-title">
+                        <span>最新章节</span>
+                        <a href="#" style="font-size: 14px; color: var(--primary-color);">查看更多 &gt;</a>
+                    </div>
+                    <div class="chapter-list">
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 425 章 大结局：凤归巢</span>
+                            <span class="chapter-date">10-24</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 424 章 风雪夜归人</span>
+                            <span class="chapter-date">10-23</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 423 章 最后的抉择</span>
+                            <span class="chapter-date">10-22</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 422 章 故人归来</span>
+                            <span class="chapter-date">10-21</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 421 章 宫变前夕</span>
+                            <span class="chapter-date">10-20</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 420 章 暗流涌动</span>
+                            <span class="chapter-date">10-19</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 419 章 病榻惊梦</span>
+                            <span class="chapter-date">10-18</span>
+                        </a>
+                        <a href="#" class="chapter-item">
+                            <span class="chapter-link">第 418 章 旧日恩怨</span>
+                            <span class="chapter-date">10-17</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Intro Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">作品简介</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.8;">
+                        女主苏婉宁本是大梁无忧无虑的郡主，国破家亡后，她将满腔仇恨藏在温柔笑意之下。她接近敌国皇帝，用尽手段让他对自己“上瘾”。然而，在一次次试探与交锋中，她发现这位冷血帝王似乎早已看穿了一切。当腹中胎儿出现，两人关系从利用变为纠缠，最终走向不可收拾的结局。
+                    </p>
+                </div>
+
+                <!-- Similar Works -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">猜你喜欢</h3>
+                    <ul class="similar-list">
+                        <li>
+                            <a href="#" class="similar-title">陛下，您的马甲掉了</a>
+                            <p class="similar-desc">女扮男装撩拨摄政王，掉马后被宠上天。</p>
+                        </li>
+                        <li>
+                            <a href="#" class="similar-title">摄政王的小娇妻</a>
+                            <p class="similar-desc">高冷摄政王爱上怂包公主，日常甜宠。</p>
+                        </li>
+                        <li>
+                            <a href="#" class="similar-title">重生之将门毒后</a>
+                            <p class="similar-desc">重生复仇，手撕白莲，虐渣爽文。</p>
+                        </li>
+                        <li>
+                            <a href="#" class="similar-title">帝皇的替身妃</a>
+                            <p class="similar-desc">替身文学经典，从厌弃到深爱的转变。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ranking Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">今日热榜</h3>
+                    <ul class="similar-list">
+                        <li>
+                            <a href="#" class="similar-title">长月烬明</a>
+                            <p class="similar-desc">仙侠玄幻，虐恋情深。</p>
+                        </li>
+                        <li>
+                            <a href="#" class="similar-title">知否知否应是绿肥红瘦</a>
+                            <p class="similar-desc">宅斗经典，生活美学。</p>
+                        </li>
+                        <li>
+                            <a href="#" class="similar-title">将夜</a>
+                            <p class="similar-desc">东方玄幻，热血修行。</p>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于古韵书阁</h3>
+                    <p style="color: #bdc3c7; font-size: 14px; line-height: 1.6;">
+                        我们致力于为读者提供最优质、最便捷的网络小说阅读体验。收录各类题材，从古言到现言，从玄幻到都市，总有一款适合你。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">首页推荐</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">书单广场</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>读者服务</h3>
+                    <ul>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">QQ粉丝群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 古韵书阁 版权所有. 本站内容仅供学习交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
