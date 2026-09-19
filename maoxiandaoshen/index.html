@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险岛神秘粉末-获取途径、配方合成与使用指南</title>
+    <meta name="description" content="本站提供《冒险岛》中神秘粉末的全面攻略。详细介绍神秘粉末的获取方式、合成配方、使用效果及最佳使用场景，助您轻松提升装备属性，打造强力角色。">
+    <meta name="keywords" content="冒险岛,神秘粉末,冒险岛攻略,装备强化,游戏道具,冒险岛配方">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a1b9a;
+            --primary-hover: #7b1fa2;
+            --secondary-color: #00bcd4;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c0e38 0%, #4a148c 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://picsum.photos/seed/maplestory_bg/1200/600') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00acc1;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Grid Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .card-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .card-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .card-list li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Recipe Table */
+        .recipe-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .recipe-table th, .recipe-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .recipe-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .recipe-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .recipe-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .item-req {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            display: none;
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>⚔️</span> 冒险岛攻略组
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">神秘粉末</a></li>
+                    <li><a href="#">强化指南</a></li>
+                    <li><a href="#">装备大全</a></li>
+                    <li><a href="#">社区交流</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>神秘粉末：装备强化的关键催化剂</h1>
+            <p>在冒险岛的世界中，神秘粉末是提升装备属性不可或缺的资源。了解如何高效获取与合成，是每一位冒险者变强的必经之路。</p>
+            <button class="btn" onclick="document.getElementById('synthesis').scrollIntoView({behavior: 'smooth'})">查看合成配方</button>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Overview Section -->
+        <section class="section-title">
+            <h2>神秘粉末是什么？</h2>
+            <p>Mysterious Powder 是用于装备强化的消耗品，能够有效提升装备的属性值。</p>
+        </section>
+
+        <div class="grid-3">
+            <article class="card">
+                <div class="card-icon">🧪</div>
+                <h3>核心用途</h3>
+                <p>主要用于装备的强化过程。使用神秘粉末可以增加强化成功的几率，或在强化失败时减少装备耐久度的损失。</p>
+                <ul class="card-list">
+                    <li>提升装备基础属性</li>
+                    <li>增加强化成功率</li>
+                    <li>保护装备耐久</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🏪</div>
+                <h3>获取渠道</h3>
+                <p>神秘粉末主要通过游戏内的特定NPC购买，或在特定副本中通过击败怪物掉落获得。</p>
+                <ul class="card-list">
+                    <li>杂货店 NPC 购买</li>
+                    <li>每日任务奖励</li>
+                    <li>特定副本掉落</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>合成机制</h3>
+                <p>玩家可以在炼金工坊或特定的合成界面，将低级的粉末合成为高级的神秘粉末，以适应更高等级的装备强化需求。</p>
+                <ul class="card-list">
+                    <li>消耗品与材料</li>
+                    <li>概率合成</li>
+                    <li>等级上限限制</li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Synthesis Section -->
+        <section id="synthesis" class="section-title">
+            <h2>常见合成配方与获取</h2>
+            <p>以下是冒险岛中常见的神秘粉末获取途径与合成需求。</p>
+        </section>
+
+        <div style="overflow-x: auto; margin-bottom: 60px;">
+            <table class="recipe-table">
+                <thead>
+                    <tr>
+                        <th>粉末名称</th>
+                        <th>获取方式</th>
+                        <th>合成需求 (示例)</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name">普通神秘粉末</td>
+                        <td>杂货店购买 / 低级副本</td>
+                        <td>无 (直接购买)</td>
+                        <td>新手装备强化</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">高级神秘粉末</td>
+                        <td>每日任务 / 中级副本</td>
+                        <td>5x 普通神秘粉末 + 1000 金币</td>
+                        <td>中级装备强化</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">特级神秘粉末</td>
+                        <td>高级副本掉落 / 特定活动</td>
+                        <td>3x 高级神秘粉末 + 5000 金币</td>
+                        <td>高级装备强化</td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">史诗神秘粉末</td>
+                        <td>特殊成就 / 稀有怪物</td>
+                        <td>10x 特级神秘粉末 + 2个稀有材料</td>
+                        <td>传说级装备强化</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">神秘粉末会消失吗？</div>
+                <div class="faq-answer">
+                    是的，神秘粉末属于一次性消耗品。在装备强化过程中使用后，粉末会被消耗，无法回收。
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">在哪里可以找到购买神秘粉末的NPC？</div>
+                <div class="faq-answer">
+                    通常可以在各大陆的主城杂货店（NPC：杂货商）找到购买选项。具体位置会根据游戏版本更新略有变化，建议打开地图搜索“杂货”关键词。
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">合成失败会损失材料吗？</div>
+                <div class="faq-answer">
+                    根据游戏机制，合成神秘粉末通常不会因为失败而直接损失材料（除非有特定保护机制），但成功率并非100%，需要多次尝试。
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">不同颜色的粉末有什么区别？</div>
+                <div class="faq-answer">
+                    粉末的颜色通常代表其稀有度或等级。颜色越深（如金色、紫色），通常意味着其提供的强化属性加成越高，但也更难获取。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 冒险岛攻略组 - 玩家自建的辅助信息平台</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">游戏官网</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #555;">
+                本站内容仅供玩家参考，游戏版权属于 Nexon Korea Corp。页面设计仅供参考。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            // Close other open items
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
