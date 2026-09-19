@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高岭家的二轮花在线阅读与资讯平台。提供高岭家的二轮花高清漫画、剧情解析、角色介绍及阅读指南，收录第1-50话最新章节，满足漫迷阅读需求。">
+    <meta name="keywords" content="高岭家的二轮花,在线漫画,韩漫,剧情解析,角色介绍">
+    <title>高岭家的二轮花-在线阅读与剧情解析指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #5649c0;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-tag {
+            background-color: rgba(108, 92, 231, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Main Content */
+        main {
+            max-width: var(--container-width);
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Area */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.8rem;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Chapter List */
+        .chapter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .chapter-item:hover {
+            transform: translateX(5px);
+            border-color: var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .chapter-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-title {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+        }
+
+        .chapter-date {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .chapter-status {
+            font-size: 0.85rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .status-new {
+            background-color: #ffeaa7;
+            color: #d35400;
+        }
+
+        .status-end {
+            background-color: #dfe6e9;
+            color: #636e72;
+        }
+
+        /* Info Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.8rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        .info-label {
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: var(--text-main);
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #f1f2f6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Synopsis */
+        .synopsis-box {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .synopsis-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .synopsis-text {
+            color: var(--text-sub);
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .synopsis-highlight {
+            background-color: rgba(108, 92, 231, 0.05);
+            padding: 1rem;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>高岭家的二轮花</span> 阅读馆
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#chapters">章节目录</a></li>
+                    <li><a href="#about">作品介绍</a></li>
+                    <li><a href="#rank">排行榜</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-tag">韩漫 · 浪漫爱情 · 成长</span>
+            <h1>高岭家的二轮花</h1>
+            <p>讲述了从小被当做“花瓶”抚养长大的财阀千金，在经历人生低谷后，如何通过自身的努力与才华，重新定义自我价值，收获真挚爱情与事业成就的故事。</p>
+            <div class="hero-meta">
+                <span>作者：Hana</span>
+                <span>状态：已完结</span>
+                <span>人气：1.2M</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-primary" style="padding: 0.8rem 2rem; font-size: 1rem;">开始阅读</button>
+                <button class="btn btn-outline" style="padding: 0.8rem 2rem; font-size: 1rem;">加入书架</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Main Content Column -->
+        <section class="content-section">
+            <!-- Synopsis -->
+            <article id="about" class="synopsis-box">
+                <h3>作品简介</h3>
+                <p class="synopsis-text">
+                    故事的主人公林娜拉，出生在韩国首屈一指的财阀家族“高岭家”。由于从小接受精英教育，她被家族寄予厚望，外表光鲜亮丽，但实际上内心渴望自由与认可。在一次家族内部的权力斗争中，娜拉被剥夺了继承权，并遭到流放，生活从云端跌落至谷底。
+                </p>
+                <p class="synopsis-text">
+                    在失去一切之后，娜拉并没有选择自暴自弃。她凭借着对时尚的敏锐触觉和过人的艺术天赋，在异国他乡白手起家，创立了自己的品牌。在成长的过程中，她遇到了生命中重要的人，学会了如何面对挫折，如何去爱，以及如何真正地掌控自己的人生。
+                </p>
+                <div class="synopsis-highlight">
+                    <strong>核心看点：</strong> 豪门恩怨的残酷与温情、女主角的逆袭成长、细腻的情感描写、以及关于“二轮花”在逆境中绽放的象征意义。
+                </div>
+            </article>
+
+            <!-- Chapters -->
+            <section id="chapters">
+                <div class="section-header">
+                    <h2 class="section-title">章节目录</h2>
+                    <a href="#" style="color: var(--primary-color); font-weight: 500;">查看全部 ></a>
+                </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 50 话：盛大的谢幕</span>
+                            <span class="chapter-date">2023-10-15</span>
+                        </div>
+                        <span class="chapter-status status-end">完结</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 49 话：迟来的告白</span>
+                            <span class="chapter-date">2023-10-10</span>
+                        </div>
+                        <span class="chapter-status status-new">最新</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 48 话：新的开始</span>
+                            <span class="chapter-date">2023-10-05</span>
+                        </div>
+                        <span class="chapter-status status-new">最新</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 47 话：雨中的约定</span>
+                            <span class="chapter-date">2023-09-28</span>
+                        </div>
+                        <span class="chapter-status status-new">最新</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 46 话：误解的消除</span>
+                            <span class="chapter-date">2023-09-20</span>
+                        </div>
+                        <span class="chapter-status status-new">最新</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-info">
+                            <span class="chapter-title">第 45 话：家族的挽留</span>
+                            <span class="chapter-date">2023-09-15</span>
+                        </div>
+                        <span class="chapter-status status-new">最新</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Info Card -->
+            <div class="info-card">
+                <h3>作品信息</h3>
+                <div class="info-grid">
+                    <span class="info-label">作者：</span>
+                    <span class="info-value">Hana</span>
+                    
+                    <span class="info-label">类型：</span>
+                    <span class="info-value">韩漫 / 浪漫爱情</span>
+                    
+                    <span class="info-label">状态：</span>
+                    <span class="info-value">已完结</span>
+                    
+                    <span class="info-label">连载平台：</span>
+                    <span class="info-value">KakaoPage</span>
+                    
+                    <span class="info-label">阅读量：</span>
+                    <span class="info-value">1,245,000+</span>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <span class="info-label" style="display:block; margin-bottom:0.5rem;">标签：</span>
+                    <div class="tag-container">
+                        <span class="tag">豪门</span>
+                        <span class="tag">逆袭</span>
+                        <span class="tag">治愈</span>
+                        <span class="tag">职场</span>
+                        <span class="tag">爱情</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="info-card">
+                <h3>同作者推荐</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li>
+                        <a href="#" style="display: flex; gap: 0.8rem; align-items: center;">
+                            <div style="width: 50px; height: 70px; background-color: #eee; border-radius: 4px; flex-shrink: 0;"></div>
+                            <div>
+                                <div style="font-weight: 600; font-size: 0.95rem;">星之彼端</div>
+                                <div style="font-size: 0.8rem; color: var(--text-sub);">科幻 / 冒险</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="display: flex; gap: 0.8rem; align-items: center;">
+                            <div style="width: 50px; height: 70px; background-color: #eee; border-radius: 4px; flex-shrink: 0;"></div>
+                            <div>
+                                <div style="font-weight: 600; font-size: 0.95rem;">黄昏的约定</div>
+                                <div style="font-size: 0.8rem; color: var(--text-sub);">纯爱 / 校园</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FAQ -->
+            <div class="info-card">
+                <h3>常见问题</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <details style="cursor: pointer; padding-bottom: 0.5rem; border-bottom: 1px solid #f0f0f0;">
+                        <summary style="font-weight: 500; color: var(--text-main);">在哪里可以阅读高岭家的二轮花？</summary>
+                        <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 0.5rem;">本站提供正版授权的在线阅读服务，请关注我们的更新列表。</p>
+                    </details>
+                    <details style="cursor: pointer; padding-bottom: 0.5rem; border-bottom: 1px solid #f0f0f0;">
+                        <summary style="font-weight: 500; color: var(--text-main);">更新频率是怎样的？</summary>
+                        <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 0.5rem;">我们保持每周2-3话的更新频率，具体时间请留意页面公告。</p>
+                    </details>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">阅读指南</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">韩漫推荐</a></li>
+                    <li><a href="#">日漫精选</a></li>
+                    <li><a href="#">国产漫画</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 高岭家的二轮花阅读馆 版权所有.
+        </div>
+    </footer>
+
+</body>
+</html>
